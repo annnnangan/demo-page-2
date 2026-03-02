@@ -22,48 +22,48 @@ export default function Header() {
           </Link>
 
           <div className="group relative">
-            <button className="flex items-center gap-1 text-gray-700 hover:text-blue-600">
+            <Link href="/services" className="flex items-center gap-1 text-gray-700 hover:text-blue-600">
               Services
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
-            </button>
+            </Link>
             <div className="invisible absolute left-0 top-full min-w-[150px] rounded-lg bg-white py-2 shadow-lg opacity-0 transition-all group-hover:visible group-hover:opacity-100">
-              <Link href="#services" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+              <Link href="/services/sem" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
                 SEM
               </Link>
-              <Link href="#services" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+              <Link href="/services/seo" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
                 SEO
               </Link>
-              <Link href="#services" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+              <Link href="/services/programmatic" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
                 Programmatic
               </Link>
             </div>
           </div>
 
           <div className="group relative">
-            <button className="flex items-center gap-1 text-gray-700 hover:text-blue-600">
+            <Link href="/works" className="flex items-center gap-1 text-gray-700 hover:text-blue-600">
               Our Works
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
-            </button>
+            </Link>
             <div className="invisible absolute left-0 top-full min-w-[150px] rounded-lg bg-white py-2 shadow-lg opacity-0 transition-all group-hover:visible group-hover:opacity-100">
-              <Link href="#projects" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+              <Link href="/works/ecommerce" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
                 E-commerce
               </Link>
-              <Link href="#projects" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+              <Link href="/works/banner-ads" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
                 Banner Ads
               </Link>
             </div>
           </div>
 
-          <Link href="#why-us" className="text-gray-700 hover:text-blue-600">
+          <Link href="/about" className="text-gray-700 hover:text-blue-600">
             About
           </Link>
 
           <Link
-            href="#cta"
+            href="/contact"
             className="rounded-full bg-blue-600 px-6 py-2 text-white transition-colors hover:bg-blue-700"
           >
             Contact Us
@@ -89,7 +89,7 @@ export default function Header() {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="border-t bg-white px-6 py-4 md:hidden">
-          <Link href="/" className="block py-2 text-gray-700">
+          <Link href="/" className="block py-2 text-gray-700" onClick={() => setIsMenuOpen(false)}>
             Home
           </Link>
           <div>
@@ -104,9 +104,10 @@ export default function Header() {
             </button>
             {servicesOpen && (
               <div className="pl-4">
-                <Link href="#services" className="block py-2 text-gray-600">SEM</Link>
-                <Link href="#services" className="block py-2 text-gray-600">SEO</Link>
-                <Link href="#services" className="block py-2 text-gray-600">Programmatic</Link>
+                <Link href="/services" className="block py-2 text-gray-600" onClick={() => setIsMenuOpen(false)}>All Services</Link>
+                <Link href="/services/sem" className="block py-2 text-gray-600" onClick={() => setIsMenuOpen(false)}>SEM</Link>
+                <Link href="/services/seo" className="block py-2 text-gray-600" onClick={() => setIsMenuOpen(false)}>SEO</Link>
+                <Link href="/services/programmatic" className="block py-2 text-gray-600" onClick={() => setIsMenuOpen(false)}>Programmatic</Link>
               </div>
             )}
           </div>
@@ -122,17 +123,19 @@ export default function Header() {
             </button>
             {worksOpen && (
               <div className="pl-4">
-                <Link href="#projects" className="block py-2 text-gray-600">E-commerce</Link>
-                <Link href="#projects" className="block py-2 text-gray-600">Banner Ads</Link>
+                <Link href="/works" className="block py-2 text-gray-600" onClick={() => setIsMenuOpen(false)}>All Works</Link>
+                <Link href="/works/ecommerce" className="block py-2 text-gray-600" onClick={() => setIsMenuOpen(false)}>E-commerce</Link>
+                <Link href="/works/banner-ads" className="block py-2 text-gray-600" onClick={() => setIsMenuOpen(false)}>Banner Ads</Link>
               </div>
             )}
           </div>
-          <Link href="#why-us" className="block py-2 text-gray-700">
+          <Link href="/about" className="block py-2 text-gray-700" onClick={() => setIsMenuOpen(false)}>
             About
           </Link>
           <Link
-            href="#cta"
+            href="/contact"
             className="mt-4 block rounded-full bg-blue-600 px-6 py-2 text-center text-white"
+            onClick={() => setIsMenuOpen(false)}
           >
             Contact Us
           </Link>
