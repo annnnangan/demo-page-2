@@ -22,37 +22,68 @@ export default function Header() {
           </Link>
 
           <div className="group relative">
-            <Link href="/services" className="flex items-center gap-1 text-gray-700 hover:text-blue-600">
+            <Link
+              href="/services"
+              className="flex items-center gap-1 text-gray-700 hover:text-blue-600"
+            >
               Services
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </Link>
             <div className="invisible absolute left-0 top-full min-w-[150px] rounded-lg bg-white py-2 shadow-lg opacity-0 transition-all group-hover:visible group-hover:opacity-100">
-              <Link href="/services/sem" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+              <Link
+                href="/services/sem"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
                 SEM
               </Link>
-              <Link href="/services/seo" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+              <Link
+                href="/services/seo"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
                 SEO
               </Link>
-              <Link href="/services/programmatic" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+              <Link
+                href="/services/programmatic"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
                 Programmatic
               </Link>
             </div>
           </div>
 
           <div className="group relative">
-            <Link href="/works" className="flex items-center gap-1 text-gray-700 hover:text-blue-600">
+            <Link
+              href="/works"
+              className="flex items-center gap-1 text-gray-700 hover:text-blue-600"
+            >
               Our Works
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </Link>
             <div className="invisible absolute left-0 top-full min-w-[150px] rounded-lg bg-white py-2 shadow-lg opacity-0 transition-all group-hover:visible group-hover:opacity-100">
-              <Link href="/works/ecommerce" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+              <Link
+                href="/works/ecommerce"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
                 E-commerce
               </Link>
-              <Link href="/works/banner-ads" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+              <Link
+                href="/works/banner-ads"
+                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
                 Banner Ads
               </Link>
             </div>
@@ -63,8 +94,9 @@ export default function Header() {
           </Link>
 
           <Link
+            id="contact-us-btn"
             href="/contact"
-            className="rounded-full bg-blue-600 px-6 py-2 text-white transition-colors hover:bg-blue-700"
+            className="contact-us-btn rounded-full bg-blue-600 px-6 py-2 text-white transition-colors hover:bg-blue-700"
           >
             Contact Us
           </Link>
@@ -78,9 +110,19 @@ export default function Header() {
         >
           <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {isMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             )}
           </svg>
         </button>
@@ -98,16 +140,50 @@ export default function Header() {
               className="flex w-full items-center justify-between py-2 text-gray-700"
             >
               Services
-              <svg className={`h-4 w-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              <svg
+                className={`h-4 w-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </button>
             {servicesOpen && (
               <div className="pl-4">
-                <Link href="/services" className="block py-2 text-gray-600" onClick={() => setIsMenuOpen(false)}>All Services</Link>
-                <Link href="/services/sem" className="block py-2 text-gray-600" onClick={() => setIsMenuOpen(false)}>SEM</Link>
-                <Link href="/services/seo" className="block py-2 text-gray-600" onClick={() => setIsMenuOpen(false)}>SEO</Link>
-                <Link href="/services/programmatic" className="block py-2 text-gray-600" onClick={() => setIsMenuOpen(false)}>Programmatic</Link>
+                <Link
+                  href="/services"
+                  className="block py-2 text-gray-600"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  All Services
+                </Link>
+                <Link
+                  href="/services/sem"
+                  className="block py-2 text-gray-600"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  SEM
+                </Link>
+                <Link
+                  href="/services/seo"
+                  className="block py-2 text-gray-600"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  SEO
+                </Link>
+                <Link
+                  href="/services/programmatic"
+                  className="block py-2 text-gray-600"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Programmatic
+                </Link>
               </div>
             )}
           </div>
@@ -117,24 +193,57 @@ export default function Header() {
               className="flex w-full items-center justify-between py-2 text-gray-700"
             >
               Our Works
-              <svg className={`h-4 w-4 transition-transform ${worksOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              <svg
+                className={`h-4 w-4 transition-transform ${worksOpen ? "rotate-180" : ""}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </button>
             {worksOpen && (
               <div className="pl-4">
-                <Link href="/works" className="block py-2 text-gray-600" onClick={() => setIsMenuOpen(false)}>All Works</Link>
-                <Link href="/works/ecommerce" className="block py-2 text-gray-600" onClick={() => setIsMenuOpen(false)}>E-commerce</Link>
-                <Link href="/works/banner-ads" className="block py-2 text-gray-600" onClick={() => setIsMenuOpen(false)}>Banner Ads</Link>
+                <Link
+                  href="/works"
+                  className="block py-2 text-gray-600"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  All Works
+                </Link>
+                <Link
+                  href="/works/ecommerce"
+                  className="block py-2 text-gray-600"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  E-commerce
+                </Link>
+                <Link
+                  href="/works/banner-ads"
+                  className="block py-2 text-gray-600"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Banner Ads
+                </Link>
               </div>
             )}
           </div>
-          <Link href="/about" className="block py-2 text-gray-700" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            href="/about"
+            className="block py-2 text-gray-700"
+            onClick={() => setIsMenuOpen(false)}
+          >
             About
           </Link>
           <Link
+            id="contact-us-btn-mobile"
             href="/contact"
-            className="mt-4 block rounded-full bg-blue-600 px-6 py-2 text-center text-white"
+            className="contact-us-btn mt-4 block rounded-full bg-blue-600 px-6 py-2 text-center text-white"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact Us
